@@ -161,11 +161,35 @@ $(document).ready(function(){
 
 $(document).ready(function() {
 
-  var array=["Swings Coffee", "Gregory's Coffee", "La Colombe", "Filter", "Qualia Coffee"];
+  var array = [{
+    title: 'Gregory\'s Coffee',
+    url: 'http://www.gregoryscoffee.com',
+  }, {
+    title: 'Swings Coffee',
+    url: 'http://www.swingscoffee.com',
+  }];
+
+  // var array=["Swings Coffee", "Gregory's Coffee", "La Colombe", "Filter", "Qualia Coffee"];
   $('#randomButton').bind('click', function() {
 
       var random = array[Math.floor(Math.random() * array.length)];
 
-      $("h1").html(random);
+      /* random = {
+        title: 'Gregory\'s Coffee',
+        url: 'http://www.dlkjdl.com',
+      }
+
+      */
+
+      $('h1').html('<a href="' + random.url + '">' + random.title + '</a>');
+
+      // logic here...
+      // set a url variable
+
+      // modify the statement below to include '<a href="' + url + '">' + random + '</a>'
+      // $("h1").html(random);
+
+      // <h1>Gregory's coffee</h1>
+      // <h1><a href="http://wwww.com">Greg</a></h1>
   });
 });
