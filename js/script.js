@@ -6,7 +6,7 @@ $(document).ready(function(){
     event.preventDefault();
     $('#hotMilkSection').slideDown();
     $('#temperatureSection').hide();
-    $('#aboutShops').slideUp();
+    $('#aboutShops').slideDown();
   }
 
   // Milk Section
