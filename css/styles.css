@@ -1,0 +1,745 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+/* **************************MOBILE******************************************** */
+@media (max-width: 599px){
+
+body {
+  color: #f0efef;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: #033048;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/**************** Colors ************* */
+/* Grey: #B1BEC6
+Black: #22221A
+Dark Grey: #565455
+Weird Grey: #CCD1CD
+Grey Blue: #728593
+Peach: #F8E6D9
+Orange: #DEA98A */
+
+/* ******************Fonts*********** */
+/* font-family: 'Merriweather', serif;
+font-family: 'Oswald', sans-serif; */
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+/******************************************
+/* BUTTONS
+/*******************************************/
+
+.button {
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 5px 0;
+  min-width: 180px;
+  font-size: 22px;
+  text-align: center;
+  display: inline-block;
+}
+
+.primary {
+  background: #DEA98A;
+  color: #22221A;
+}
+
+.secondary {
+  background: #033048;
+  color: #F8E6D9;
+}
+
+/******************************************
+/* HEADER
+/*******************************************/
+
+.logo {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+header {
+  background: #22221A;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+header .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+header .logo {
+  color: #DEA98A;
+}
+
+/******************************************
+/* NAV
+/*******************************************/
+
+
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 40px;
+  font-size: 14px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: #F5E7DD
+}
+
+/******************************************
+/* section1
+/*******************************************/
+
+.section1 {
+  max-height: 599px;
+  background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
+  background-size: cover;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+#decisionTree .section1{
+  background: #131e27;
+  color: #DEA98A;
+}
+
+.section1 h2 {
+  font-size: 22px;
+  color: white;
+  margin: 80px 0 50px;
+  font-weight: 600;
+}
+
+#decisionTree h2 {
+  color: #dea98a;
+}
+
+
+/******************************************
+/* section2
+/*******************************************/
+
+.section2 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #B1BEC6;
+}
+
+/******************************************
+/* section3
+/*******************************************/
+
+.section3 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #F6E7DB;
+}
+
+/******************************************
+/* section4
+/*******************************************/
+
+.section4 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #B1BEC6;
+}
+
+.section4 p, {
+/* .section2 ul { */
+  width: 600px;
+}
+
+/******************************************
+/* section5
+/*******************************************/
+
+.section5 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #F6E7DB;
+}
+
+/******************************************
+/* BOTTOM CTA
+/*******************************************/
+
+.bottom-cta {
+  background: 	#728593;
+  padding: 5px;
+  text-align: center;
+
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+footer {
+  background: #22221A;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .logo {
+  color: #DEA98A;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #F8E6D9;
+  font-weight: 600;
+}
+
+footer img {
+  color: #F8E6D9;
+}
+
+.social {
+  margin: 0;
+  /* margin-bottom: 25px; */
+  padding: 0;
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.social > li {
+  margin: auto;
+}
+
+}
+
+/* *********************************************Tablet **************************/
+@media (min-width: 600px){
+
+body {
+  color: #f0efef;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: #033048;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+/******************************************
+/* BUTTONS
+/*******************************************/
+
+.button {
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 12px 0;
+  min-width: 280px;
+  font-size: 28px;
+  text-align: center;
+  display: inline-block;
+}
+
+.primary {
+  background: #DEA98A;
+  color: #22221A;
+}
+
+.secondary {
+  background:#033048;
+  color: #F8E6D9;
+  font-size: 24px;
+}
+
+/******************************************
+/* HEADER
+/*******************************************/
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+header {
+  background: #22221A;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+header .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+header .logo {
+  color: #DEA98A;
+}
+
+/******************************************
+/* NAV
+/*******************************************/
+
+
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 40px;
+  font-size: 22px;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+nav a {
+  color: #F5E7DD
+}
+
+/******************************************
+/* section1
+/*******************************************/
+
+.section1 {
+  max-height: 1200px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.section1 h2 {
+  font-size: 32px;
+  margin: 60px 0 60px;
+}
+
+.section1 {
+  max-height: 599px;
+  background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
+  background-size: cover;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+#decisionTree .section1{
+  background: #131e27;
+  color: #DEA98A;
+}
+
+#decisionTree h2 {
+  color: #dea98a;
+}
+
+
+/******************************************
+/* section2
+/*******************************************/
+
+.section2 {
+  text-align: center;
+  padding: 70px 10px;
+  background-color: #B1BEC6;
+}
+
+/******************************************
+/* section3
+/*******************************************/
+
+.section3 {
+  text-align: center;
+  padding: 70px 10px;
+  background-color: #F6E7DB;
+}
+
+/******************************************
+/* section4
+/*******************************************/
+
+.section4 {
+  text-align: center;
+  padding: 70px 10px;
+  background-color: #B1BEC6;
+}
+
+/******************************************
+/* section5
+/*******************************************/
+
+.section5 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #F6E7DB;
+}
+
+/******************************************
+/* BOTTOM CTA
+/*******************************************/
+
+.bottom-cta {
+  background: 	#728593;
+  padding: 30px;
+  text-align: center;
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+footer {
+  background: #22221A;
+  padding: 65px 0 45px;
+  text-align: center;
+}
+
+footer .logo {
+  color: #DEA98A;
+  margin-bottom: 68px;
+}
+
+footer p {
+  font-size: 18px;
+  color: #F8E6D9;
+  font-weight: 600;
+}
+
+footer img {
+  color: #F8E6D9;
+}
+
+.social {
+  margin: 0;
+  margin-bottom: 75px;
+  padding: 0;
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.social > li {
+  margin-left: 26px;
+  margin-right: 26px;
+}
+
+}
+
+
+/* ***************************************COMPUTER********************************** */
+
+@media (min-width: 1200px) {
+
+  body {
+    color: #f0efef;
+    font-size: 26px;
+    line-height: 1.4;
+    color: #606161;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    width: 100%;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h3 {
+    color: #033048;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+    
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .hide {
+    display: none;
+  }
+  
+  /******************************************
+  /* BUTTONS
+  /*******************************************/
+  
+  .button {
+    border-radius: 5px;
+    font-weight: 800;
+    padding: 12px 0;
+    min-width: 280px;
+    font-size: 28px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .primary {
+    background: #DEA98A;
+    color: #22221A;
+  }
+  
+  .secondary {
+    background: #033048;
+    color: #F8E6D9;
+    font-size: 24px;
+  }
+  
+  /******************************************
+  /* HEADER
+  /*******************************************/
+  
+  .logo {
+    font-size: 48px;
+    font-weight: 800;
+  }
+  
+  header {
+    background: #22221A;
+    padding: 25px 0;
+    overflow: hidden;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  header .logo {
+    color: #DEA98A;
+  }
+  
+  /******************************************
+  /* NAV
+  /*******************************************/
+  
+  
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 40px;
+    font-size: 24px;
+  }
+  
+  nav li:first-child {
+    margin-left: 0;
+  }
+  
+  nav a {
+    color: #F5E7DD
+  }
+  
+  /******************************************
+  /* section1
+  /*******************************************/
+  
+  .section1 {
+    min-height: 700px;
+    background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
+    background-size: cover;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  #decisionTree .section1{
+    background: #131e27;
+    color: #DEA98A;
+  }
+
+  .section1 h2 {
+    font-size: 48px;
+    color: white;
+    margin: 120px 0 90px;
+    font-weight: 600;
+  }
+  
+  
+  /******************************************
+  /* section2
+  /*******************************************/
+  
+  .section2 {
+    text-align: center;
+    padding: 70px 0 70px;
+    background-color: #B1BEC6;
+  }
+  
+  /******************************************
+  /* section3
+  /*******************************************/
+  
+  .section3 {
+    text-align: center;
+    padding: 70px 0 70px;
+    background-color: #F6E7DB;
+  }
+  
+  /******************************************
+  /* section4
+  /*******************************************/
+  
+  .section4 {
+    text-align: center;
+    padding: 70px 0 70px;
+    background-color: #B1BEC6;
+  }
+
+  /******************************************
+/* section5
+/*******************************************/
+
+.section5 {
+  text-align: center;
+  padding: 40px 0 40px;
+  background-color: #F6E7DB;
+}
+    
+  /******************************************
+  /* BOTTOM CTA
+  /*******************************************/
+  
+  .bottom-cta {
+    background: 	#728593;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /******************************************
+  /* FOOTER
+  /*******************************************/
+  
+  footer {
+    background: #22221A;
+    padding: 65px 0 45px;
+    text-align: center;
+  }
+  
+  footer .logo {
+    color: #DEA98A;
+    margin-bottom: 68px;
+  }
+  
+  footer p {
+    font-size: 18px;
+    color: #F8E6D9;
+    font-weight: 600;
+  }
+  
+  footer img {
+    color: #F8E6D9;
+  }
+  
+  .social {
+    margin: 0;
+    margin-bottom: 75px;
+    padding: 0;
+    display: inline-flex;
+    list-style-type: none;
+  }
+  
+  .social > li {
+    margin-left: 26px;
+    margin-right: 26px;
+  }
+  }

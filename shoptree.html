@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A question tree on where to get your coffee">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DC Drip: Where Should I go?</title>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:300,400,900|Oswald:300,400' rel='stylesheet' type='text/css'>
+
+  <!-- external CSS link -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body id="decisionTree">
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">About</a>
+          </li>
+          <li>
+            <a href="givingcircle.html">Giving Circle</a>
+          </li>
+          <li class="logo">DC DRIP</li>
+          <li>
+            <a href="#">Cafes</a>
+          </li>
+          <li>
+            <a href="tours.html">Coffee Tours</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="section1">
+    <div class="container">
+      <h2>Where Should I get my coffee?</h2>
+      <img src="images/downarrow.jpg" alt="a down arrow">
+    </div>
+  </section>
+  <section class="spacer">
+    <div class="container"></div>
+  </section>
+  <section class="section3" id="aboutShops">
+      <div class="container">
+        <h3>Need Help Finding Your Next Shop?</h3>
+        <p>Choose your next cafe destination based on the drink you want. 
+          Indecisive? We have you covered. Click on the Cafe Roulette button for 
+        a recommended cafe.</p>
+          <h1></h1>
+          <button class="button primary" id="randomButton">Cafe Roulette</button>
+      </div>
+    </section>
+
+
+<!--  - - - - - - - - - - -Section 2 - - - - - - - - - - - - - - - - - - - -->
+  <!-- Temperature -->
+
+  <section class="section2" id="temperatureSection">
+    <div class="container">
+      <h3>Do want something hot or cold?</h3>
+      <button class="button primary" id="hot">Hot!</button>
+      <button class="button primary" id="cold">Cold!</button>
+
+    </div>
+  </section>
+
+<!--  - - - - - - - - - - -Section 3 - - - - - - - - - - - - - - - - - - - -->
+  <!-- Milk? -->
+
+  <section class="section3 hide" id="hotMilkSection">
+    <div class="container">
+      <h3>Milk?</h3>
+      <p>or milk alternative...</p>
+      <button class="button secondary" id="hotNoMilk">NO WAY!</button>
+      <button class="button secondary" id="hotYesMilk">BRING IT!</button>
+      <p>HOT</p>
+    </div>
+  </section>
+  <section class="section3 hide" id="coldMilkSection">
+      <div class="container">
+        <h3>Cold "Milk"?</h3>
+        <p>or milk altnative...</p>
+        <button class="button secondary" id="coldNoMilk">NO WAY!</button>
+        <button class="button secondary" id="coldYesMilk">BRING IT!</button>
+        <p>COLD</p>
+      </div>
+    </section>
+  
+<!--  - - - - - - - - - - -Section 4 - - - - - - - - - - - - - - - - - - - -->
+  <!--HNM Flow-->
+  <section class="section4 hide" id="hotNoMilkSection">
+    <div class="container">
+      <h3>What are you feeling?</h3>
+      <button class="button primary" id="drip">Drip Coffee</button>
+      <button class="button primary" id="espresso">Espresso</button>
+      <button class="button primary" id="pourOver">Pour Over</button>
+      <button class="button primary" id="americano">Americano</button>
+      <p>HOT + NO MILK</p>
+    </div>
+  </section>
+
+  <!-- HM Flow -->
+  <section class="section4 hide" id="hotYesMilkSection">
+    <div class="container">
+      <h3>What are you feeling?</h3>
+      <button class="button primary" id="cortado">Cortado</button>
+      <button class="button primary" id="macchiato">Macchiato</button>
+      <button class="button primary" id="flatWhite">Flat White</button>
+      <button class="button primary" id="cappuccino">Cappuccino</button>
+      <button class="button primary" id="latte">Latte</button>
+      <p>HOT + MILK</p>
+    </div>
+  </section>
+
+  <!-- CNM Flow -->
+
+  <section class="section4 hide" id="coldNoMilkSection">
+      <div class="container">
+        <h3>What are you feeling?</h3>
+        <button class="button primary" id="coldBrew">Cold Brew</button>
+        <p>Cold + NO MILK</p>
+      </div>
+    </section>
+
+    <!-- CM Flow -->
+
+    <section class="section4 hide" id="coldYesMilkSection">
+        <div class="container">
+          <h3>What are you feeling?</h3>
+          <button class="button primary" id="icedLatte">Iced Latte</button>
+          <button class="button primary" id="draftLatte">Draft Latte</button>
+          <p>Cold + NO MILK</p>
+        </div>
+      </section>
+  
+
+<!--  - - - - - - - - - - -Section 5 - - - - - - - - - - - - - - - - - - - -->
+  <!-- HNM Shops -->
+  <section class="section5 hide" id="hotNoMilkDrip">
+      <div class="container">
+        <h3>Drip be bomb!</h3>
+        <p>Each has a unique atmosphere and brilliant drip coffee.</p>
+        <button class="button secondary">
+          <a href="#" data-featherlight="#qualiaMap">Qualia Coffee</a>
+        </button>
+          <div id="qualiaMap" class="hide">
+              <p><a href="https://www.qualiacoffee.com/" target="blank">Qualia Coffee</a></p>
+              <img src="images/qualiaMap.png" alt="map of qualia">
+          </div>
+          <button class="button secondary">
+            <a href="#" data-featherlight="#philzMap">Philz Coffee</a>
+          </button>
+            <div id="philzMap" class="hide">
+                <p><a href="https://www.philzcoffee.com/" target="blank">Philz Coffee</a></p>
+                <img src="images/philzMap.png" alt="map of philz coffee">
+            </div>
+           <button class="button secondary">
+              <a href="#" data-featherlight="#swingsMap">Swing's Coffee</a>
+           </button>
+              <div id="swingsMap" class="hide">
+                  <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee Roasters</a></p>
+                  <img src="images/swingsMap.png" alt="map of Swing's coffee">
+                </div>
+        <p>HOT + NO MILK + DRIP</p>
+        <FORM>
+          <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+       </FORM>
+      </div>
+    </section>
+    <section class="section5 hide" id="hotNoMilkEspresso">
+        <div class="container">
+          <h3>Get your Espresso on at one of these cafes:</h3>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#swingsMap">Swing's Coffee</a>
+            </button>
+              <div id="swingsMap" class="hide">
+                  <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee Roasters</a></p>
+                  <img src="images/swingsMap.png" alt="map of Swing's coffee">
+              </div>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+              </button>
+                  <div id="laColombeMap" class="hide">
+                      <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                      <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+                  </div>
+              <button class="button secondary">
+                <a href="#" data-featherlight="#vigilanteCoffee">Vigilante Coffee Company</a>
+              </button>
+                <div id="vigilanteCoffee" class="hide">
+                    <p><a href="http://vigilantecoffee.com/" target="blank">Vigilante Coffee Company</a></p>
+                    <img src="images/vigilanteMap.png" alt="map of Vigilante coffee">
+                </div>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#wydownCoffee">The Wydown</a>
+                </button>
+                  <div id="wydownCoffee" class="hide">
+                      <p><a href="http://thewydown.com/" target="blank">The Wydown</a></p>
+                      <img src="images/wydownMap.png" alt="map of Wydown coffee">
+                  </div>
+          <p>HOT + NO MILK + Espresso</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+          </FORM>
+        </div>
+      </section>
+      <section class="section5 hide" id="hotNoMilkPourOver">
+          <div class="container">
+            <h3>Pour Over</h3>
+            <p>Wait. Be Patient. Wait... Now enjoy!</p>
+            <button class="button secondary">
+                <a href="#" data-featherlight="#tcbCoffee">The Coffee Bar</a>
+            </button>
+            <div id="tcbCoffee" class="hide">
+                <p><a href="https://www.thecoffeebardc.com/" target="blank">The Coffee Bar</a></p>
+                <img src="images/tcbCoffee.png" alt="map of The Coffee Bar">
+            </div>
+            <button class="button secondary">
+                <a href="#" data-featherlight="#vigilanteCoffee">Vigilante Coffee Company</a>
+              </button>
+                <div id="vigilanteCoffee" class="hide">
+                    <p><a href="http://vigilantecoffee.com/" target="blank">Vigilante Coffee Company</a></p>
+                    <img src="images/vigilanteMap.png" alt="map of Vigilante coffee">
+                </div>
+                <button class="button secondary">
+                    <a href="#" data-featherlight="#wydownCoffee">The Wydown</a>
+                  </button>
+                    <div id="wydownCoffee" class="hide">
+                        <p><a href="http://thewydown.com/" target="blank">The Wydown</a></p>
+                        <img src="images/wydownMap.png" alt="map of Wydown coffee">
+                    </div>
+            <p>HOT + NO MILK + Pour Over</p>
+            <FORM>
+              <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+            </FORM>
+          </div>
+        </section>
+        <section class="section5 hide" id="hotNoMilkAmericano">
+            <div class="container">
+              <h3>Ameriano</h3>
+              <p>And...Expresso and Water Join!</p>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#swingsMap">Swing's Coffee Roasters</a>
+                </button>
+                  <div id="swingsMap" class="hide">
+                      <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee</a></p>
+                      <img src="images/swingsMap.png" alt="map of Swing's coffee">
+                  </div>
+                  <button class="button secondary">
+                      <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+                    </button>
+                      <div id="laColombeMap" class="hide">
+                          <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                          <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+                      </div>
+                      <button class="button secondary">
+                          <a href="#" data-featherlight="#vigilanteCoffee">Vigilante Coffee Company</a>
+                        </button>
+                          <div id="vigilanteCoffee" class="hide">
+                              <p><a href="http://vigilantecoffee.com/" target="blank">Vigilante Coffee Company</a></p>
+                              <img src="images/vigilanteMap.png" alt="map of Vigilante coffee">
+                          </div>
+              <p>HOT + NO MILK + Americano</p>
+              <FORM>
+                <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+              </FORM>
+            </div>
+          </section>
+
+      <!-- HM Shops -->
+      <section class="section5 hide" id="hotMilkCortado">
+        <div class="container">
+          <h3>Cortado</h3>
+          <p>Wet foam and a double shot = perfection</p>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#swingsMap">Swing's Coffee Roasters</a>
+            </button>
+              <div id="swingsMap" class="hide">
+                  <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee</a></p>
+                  <img src="images/swingsMap.png" alt="map of Swing's coffee">
+              </div>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#blueBottleCoffee">Blue Bottle Coffee</a>
+                </button>
+                  <div id="blueBottleCoffee" class="hide">
+                      <p><a href="https://bluebottlecoffee.com/cafes/" target="blank">Blue Bottle Coffee</a></p>
+                      <img src="images/bluebottleCoffee.png" alt="map of Blue Bottle coffee">
+                  </div>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#wydownCoffee">The Wydown</a>
+            </button>
+              <div id="wydownCoffee" class="hide">
+                  <p><a href="http://thewydown.com/" target="blank">The Wydown</a></p>
+                  <img src="images/wydownMap.png" alt="map of Wydown coffee">
+              </div>
+          <p>HOT + MILK + Cortado</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+          </FORM>
+        </div>
+      </section>
+      <section class="section5 hide" id="hotMilkMacchiato">
+        <div class="container">
+          <h3>Macchiato</h3>
+          <p>A mini cap, but better!</p>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#swingsMap">Swing's Coffee Roasters</a>
+            </button>
+              <div id="swingsMap" class="hide">
+                  <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee</a></p>
+                  <img src="images/swingsMap.png" alt="map of Swing's coffee">
+              </div>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+              </button>
+                <div id="laColombeMap" class="hide">
+                    <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                    <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+                </div>
+                <button class="button secondary">
+                    <a href="#" data-featherlight="#wydownCoffee">The Wydown</a>
+                </button>
+                  <div id="wydownCoffee" class="hide">
+                     <p><a href="http://thewydown.com/" target="blank">The Wydown</a></p>
+                     <img src="images/wydownMap.png" alt="map of Wydown coffee">
+                  </div>
+          <p>HOT + MILK + Macchiato</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+          </FORM>
+        </div>
+      </section>
+      <section class="section5 hide" id="hotMilkFlatWhite">
+        <div class="container">
+          <h3>Flat White</h3>
+          <p>Damp cappuccino that the Aussies like.</p>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#filterMap">Filter Coffeehouse</a>
+         </button>
+            <div id="filterMap" class="hide">
+                <p><a href="http://www.filtercoffeehouse.com/" target="blank">Swing's Coffee</a></p>
+                <img src="images/FilterCoffee.png" alt="map of Filter's coffee">
+            </div>
+             <button class="button secondary">
+                <a href="#" data-featherlight="#blueBottleCoffee">Blue Bottle Coffee</a>
+              </button>
+                <div id="blueBottleCoffee" class="hide">
+                    <p><a href="https://bluebottlecoffee.com/cafes/union-market" target="blank">Blue Bottle Coffee</a></p>
+                    <img src="images/bluebottleCoffee.png" alt="map of Blue Bottle coffee">
+                </div>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#bluestoneCoffee">Bluestone Lane</a>
+               </button>
+                <div id="bluestoneCoffee" class="hide">
+                    <p><a href="https://bluestonelane.com/" target="blank">Bluestone Lane</a></p>
+                    <img src="images/bluestoneCoffee.png" alt="map of Bluestone Lane coffee">
+                </div>
+          <p>HOT + MILK + Flat White</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+          </FORM>
+        </div>
+      </section>
+      <section class="section5 hide" id="hotMilkCappuccino">
+        <div class="container">
+          <h3>Cappuccino</h3>
+          <p>Espresso with cloud milk.</p>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#swingsMap">Swing's Coffee Roasters</a>
+            </button>
+              <div id="swingsMap" class="hide">
+                  <p><a href="https://swingscoffee.com/" target="blank">Swing's Coffee</a></p>
+                  <img src="images/swingsMap.png" alt="map of Swing's coffee">
+              </div>
+            <button class="button secondary">
+               <a href="#" data-featherlight="#filterMap">Filter Coffeehouse</a>
+            </button>
+               <div id="filterMap" class="hide">
+                  <p><a href="http://www.filtercoffeehouse.com/" target="blank">Swing's Coffee</a></p>
+                  <img src="images/FilterCoffee.png" alt="map of Filter's coffee">
+               </div>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#bluestoneCoffee">Bluestone Lane</a>
+           </button>
+            <div id="bluestoneCoffee" class="hide">
+                <p><a href="https://bluestonelane.com/" target="blank">Bluestone Lane</a></p>
+                <img src="images/bluestoneCoffee.png" alt="map of Bluestone Lane coffee">
+            </div>
+          <p>HOT + MILK + Cappuccino</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+          </FORM>
+        </div>
+      </section>
+      <section class="section5 hide" id="hotMilkLatte">
+        <div class="container">
+          <h3>Latte</h3>
+          <p>Time for a "latte" milk!</p>
+          <button class="button secondary">
+              <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+            </button>
+              <div id="laColombeMap" class="hide">
+                  <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                  <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+              </div>
+              <button class="button secondary">
+                <a href="#" data-featherlight="#wydownCoffee">The Wydown</a>
+              </button>
+                <div id="wydownCoffee" class="hide">
+                    <p><a href="http://thewydown.com/" target="blank">The Wydown</a></p>
+                    <img src="images/wydownMap.png" alt="map of Wydown coffee">
+                </div>
+               <button class="button secondary">
+                  <a href="#" data-featherlight="#tcbCoffee">The Coffee Bar</a>
+               </button>
+                <div id="tcbCoffee" class="hide">
+                    <p><a href="https://www.thecoffeebardc.com/" target="blank">The Coffee Bar</a></p>
+                    <img src="images/tcbCoffee.png" alt="map of The Coffee Bar">
+                </div>
+          <p>HOT + MILK + Latte</p>
+          <FORM>
+            <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+         </FORM>
+        </div>
+      </section>
+
+      <!-- C Shops -->
+
+      <section class="section5 hide" id="coldMilkColdBrew">
+          <div class="container">
+            <h3>Cold Brew</h3>
+            <p>Hot or Cold, a cold brew is always a good option.</p>
+            <button class="button secondary">
+              <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+            </button>
+              <div id="laColombeMap" class="hide">
+                  <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                  <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+               </div> 
+             <button class="button secondary">
+                <a href="#" data-featherlight="#commonwealthJoe">Commonwealth Joe</a>
+            </button>
+               <div id="commonwealthJoe" class="hide">
+                  <p><a href="https://commonwealthjoe.com/" target="blank">Commonwealth Joe Coffee</a></p>
+                  <img src="images/commonwealthJoe.png" alt="map of Commonwealth Joe coffee">
+               </div> 
+            <button class="button secondary">
+                 <a href="#" data-featherlight="#compassCoffee">Compass Coffee</a>
+            </button>
+               <div id="compassCoffee" class="hide">
+                  <p><a href="http://compasscoffee.com/" target="blank">Compass Coffee</a></p>
+                  <img src="#" alt="map of Compass coffee">
+               </div> 
+            <p>HOT + MILK + COLD BREW</p>
+            <FORM>
+              <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+            </FORM>
+          </div>
+        </section>
+        <section class="section5 hide" id="coldYesMilkIcedLatte">
+            <div class="container">
+              <h3>Iced Latte</h3>
+              <p>Drink a latte through a straw. Yummmm</p>
+              <button class="button secondary">
+                  <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+                </button>
+                  <div id="laColombeMap" class="hide">
+                      <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                      <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+                  </div>
+                 <button class="button secondary">
+                    <a href="#" data-featherlight="#tcbCoffee">The Coffee Bar</a>
+                 </button>
+                   <div id="tcbCoffee" class="hide">
+                       <p><a href="https://www.thecoffeebardc.com/" target="blank">The Coffee Bar</a></p>
+                       <img src="images/tcbCoffee.png" alt="map of The Coffee Bar">
+                   </div>
+                 <button class="button secondary">
+                   <a href="#" data-featherlight="#peregrineCoffee">The Coffee Bar</a>
+                 </button>
+                   <div id="peregrineCoffee" class="hide">
+                     <p><a href="http://peregrineespresso.com/" target="blank">The Coffee Bar</a></p>
+                     <img src="images/peregrineEspresso.png" alt="map of the Peregrine Espresso">
+                   </div>
+              <p>HOT + MILK + ICED LATTE</p>
+              <FORM>
+                <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+              </FORM>
+            </div>
+          </section>
+          <section class="section5 hide" id="coldYesMilkDraftLatte">
+              <div class="container">
+                <h3>Draft Latte</h3>
+                <p>Have you ever heard of La Colombe?</p>
+                <button class="button secondary">
+                    <a href="#" data-featherlight="#laColombeMap">La Colombe Coffee Roasters</a>
+                  </button>
+                    <div id="laColombeMap" class="hide">
+                        <p><a href="https://www.lacolombe.com/" target="blank">La Colombe Coffee Roasters</a></p>
+                        <img src="images/laColombeMap.png" alt="map of La Colombe coffee">
+                    </div>
+                <p>HOT + MILK + DRAFT LATTE</p>
+                <FORM>
+                  <INPUT TYPE="button" class="button secondary" onClick="history.go(0)" VALUE="Start Over">
+               </FORM>
+              </div>
+            </section>
+
+
+  <footer>
+    <h4 class="logo">DC Drip</h4>
+
+    <ul class="social">
+      <li>
+        <a href="http://twitter.com/dripdcpodcast" target="blank">
+          <img src="images/twitter.png" alt="Twitter logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://facebook.com/dcdrippodcast" target="blank">
+          <img src="images/facebook.png" alt="Facebook logo">
+        </a>
+      </li>
+    </ul>
+
+    <p class="copyright">Copyright 2018. Relaxr.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src='js/script.js'></script>
+</body>
+
+</html>
