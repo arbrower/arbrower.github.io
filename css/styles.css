@@ -35,11 +35,12 @@ a:link {
   color: white;
   }
 
+  fieldset {
+    display: block;
+  }
+
   /* About Page Base Styles */
 
-  /* #about .section2 {
-    display: flex;
-  } */
 
   #about ul {
     display: flex;
@@ -205,7 +206,13 @@ nav a {
   background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
   background-size: cover;
   padding: 30%;
+}
 
+#tours .section1 {
+  max-height: 599px;
+  background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
+  background-size: cover;
+  padding: 30%;
 }
 
 #decisionTree .section1{
@@ -471,6 +478,10 @@ nav a {
 }
 
 #about .section1 {
+  padding: 25%;
+}
+
+#tours .section1 {
   padding: 25%;
 }
 
