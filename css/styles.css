@@ -25,6 +25,39 @@ html {
 /* BASE STYLES
 /*******************************************/
 
+a:link {
+  color: #DEA98A;
+  }
+  a:visited {
+  color: #606161;
+  }
+  a:hover {
+  color: white;
+  }
+
+  /* About Page Base Styles */
+
+  /* #about .section2 {
+    display: flex;
+  } */
+
+  #about ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    text-align: left;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+
+
 
 /* **************************MOBILE******************************************** */
 @media (max-width: 599px){
@@ -167,7 +200,20 @@ nav a {
   text-align: center;
 }
 
+#about .section1 {
+  max-height: 599px;
+  background: url(../images/drip_podcast_assets-03.png) no-repeat top center #131e27;
+  background-size: cover;
+  padding: 30%;
+
+}
+
 #decisionTree .section1{
+  background: #131e27;
+  color: #DEA98A;
+}
+
+#givingCircles .section1{
   background: #131e27;
   color: #DEA98A;
 }
@@ -183,6 +229,10 @@ nav a {
   color: #dea98a;
 }
 
+#arrow {
+  display: none;
+}
+
 
 /******************************************
 /* section2
@@ -193,6 +243,8 @@ nav a {
   padding: 40px 0 40px;
   background-color: #B1BEC6;
 }
+
+
 
 /******************************************
 /* section3
@@ -418,7 +470,16 @@ nav a {
   text-align: center;
 }
 
+#about .section1 {
+  padding: 25%;
+}
+
 #decisionTree .section1{
+  background: #131e27;
+  color: #DEA98A;
+}
+
+#givingCircles .section1{
   background: #131e27;
   color: #DEA98A;
 }
@@ -427,6 +488,10 @@ nav a {
   color: #dea98a;
 }
 
+#arrow {
+  max-width: 75px;
+  max-height: 75px;
+}
 
 /******************************************
 /* section2
@@ -646,12 +711,21 @@ footer img {
     background: #131e27;
     color: #DEA98A;
   }
-
   .section1 h2 {
     font-size: 48px;
     color: white;
     margin: 120px 0 90px;
     font-weight: 600;
+  }
+
+  #givingCircles .section1{
+    background: #131e27;
+    color: #DEA98A;
+  }
+
+  #arrow {
+    max-width: 100px;
+    max-height: 100px;
   }
   
   

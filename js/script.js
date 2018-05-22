@@ -167,29 +167,59 @@ $(document).ready(function() {
   }, {
     title: 'Swings Coffee',
     url: 'http://www.swingscoffee.com',
-  }];
+  }, {
+    title: 'La Colombe',
+    url: 'http://www.lacombecoffee.com',
+  }, {
+    title: 'The Coffee Bar',
+    url: 'http://www.tcb.com',
+  } , {
+    title: 'The Wydown',
+    url: 'http://www.thewydown.com',
+  }
+
+
+  ];
 
   // var array=["Swings Coffee", "Gregory's Coffee", "La Colombe", "Filter", "Qualia Coffee"];
   $('#randomButton').bind('click', function() {
 
       var random = array[Math.floor(Math.random() * array.length)];
 
-      /* random = {
-        title: 'Gregory\'s Coffee',
-        url: 'http://www.dlkjdl.com',
-      }
-
-      */
 
       $('h1').html('<a href="' + random.url + '">' + random.title + '</a>');
 
-      // logic here...
-      // set a url variable
-
-      // modify the statement below to include '<a href="' + url + '">' + random + '</a>'
-      // $("h1").html(random);
-
-      // <h1>Gregory's coffee</h1>
-      // <h1><a href="http://wwww.com">Greg</a></h1>
   });
 });
+
+
+
+
+function showAboutText () {
+console.log('show about text')
+$('#historyText').addClass('hide');
+$('#listenNow').addClass('hide');
+$('#aboutText').removeClass ('hide');
+$('#aboutText').addClass('show');
+
+}
+
+function showHistoryText () {
+  $('#aboutText').addClass('hide');
+  $('#listenNow').addClass('hide');
+  $('#historyText').removeClass ('hide');
+  $('#historyText').addClass('show');
+}
+
+function showListenText () {
+  $('#aboutText').addClass('hide');
+  $('#historyText').addClass('hide');
+  $('#listenNow').removeClass ('hide');
+  $('#listenNow').addClass('show');
+}
+
+
+
+$('#aboutHome').click(showAboutText);
+$('#history').click(showHistoryText);
+$('#listen').click(showListenText);
